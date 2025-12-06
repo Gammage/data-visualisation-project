@@ -1,0 +1,12 @@
+Plotting a simple line on a graph
+mpl_squares.py
+
+Using built in styles
+mpl_squares.py
+
+plotting and styling individual points with scatter()
+scatter_squares.py
+
+Random walks
+creating the randomwalk class
+random_walk.py

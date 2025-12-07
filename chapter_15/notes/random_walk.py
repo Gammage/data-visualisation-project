@@ -24,13 +24,14 @@ class RandomWalk:
                 #the distance choice has a 0 because one can potentially not move in one direction
                 
             #just a reminder this is a list not a [:] slice
+            
             x_direction = choice([1,-1])
-            x_distance = choice([0,1,2,3,4])
+            x_distance = choice([0,1,2,3,4,5])
             x_step = x_direction * x_distance
             
             
             y_direction = choice([1,-1])
-            y_distance = choice([0,1,2,3,4])
+            y_distance = choice([0,1,2,3,4,5])
             y_Step = y_direction * y_distance
             
             #reject moves that go nowhere

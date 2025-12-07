@@ -8,5 +8,12 @@ plotting and styling individual points with scatter()
 scatter_squares.py
 
 Random walks
+
 creating the randomwalk class
 random_walk.py
+
+Random walks plotting
+rw_visual.py
+
+styling the walks
+rw_visual.py

@@ -60,3 +60,4 @@ ax.tick_params(labelsize=14)
 
 #save to a file using plt.savefig() instead of plt.show()
 plt.savefig('squares_plot.png',bbox_inches='tight')
+

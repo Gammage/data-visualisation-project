@@ -17,3 +17,17 @@ rw_visual.py
 
 styling the walks
 rw_visual.py
+
+//Using plotly/Pandas
+
+creating the Die class
+die.py
+
+rolling the die
+die_visual.py
+
+analyzing the results
+die_visual.py
+
+making a histogram
+die_visual.py

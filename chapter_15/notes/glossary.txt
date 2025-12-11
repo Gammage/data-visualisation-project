@@ -31,3 +31,7 @@ die_visual.py
 
 making a histogram
 die_visual.py
+
+Rolling dice of different sizes
+dice_visual_d6d10.py
+

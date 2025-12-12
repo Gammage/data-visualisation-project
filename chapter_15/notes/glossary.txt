@@ -1,3 +1,5 @@
+CHAPTER 15: GENERATING DATA
+
 Plotting a simple line on a graph
 mpl_squares.py
 

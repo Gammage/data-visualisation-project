@@ -1,0 +1,10 @@
+CHAPTER_16: DOWNLOADING DATA
+
+parsing the CSV file headers:
+sitka_highs.py
+
+printing the headers and their positions:
+sitka_highs.py
+
+extracting and reading data:
+sitka_highs.py

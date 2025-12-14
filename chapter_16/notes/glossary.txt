@@ -8,3 +8,16 @@ sitka_highs.py
 
 extracting and reading data:
 sitka_highs.py
+
+the datetime module
+sitka_highs.py
+
+plotting a longer timeframe:
+sitka_highs.py
+
+plotting a second data series:
+sitka_highs_lows.py
+
+error checking:
+death_valley_highs_lows.py
+

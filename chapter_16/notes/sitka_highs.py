@@ -4,12 +4,13 @@
 
 from pathlib import Path
 import matplotlib.pyplot as plt
+from datetime import datetime
 import csv
 
 #CHECK WHERE THE PATH IS FROM, SEE THE TERMINAL FOLDER NAME. THATS THE BEGINNING OF THE PATH
 
 #we build a path object that looks in the weather data folder
-path = Path('chapter_16/weather_data/sitka_weather_07-2021_simple.csv')
+path = Path('chapter_16/weather_data/sitka_weather_2021_simple.csv')
 
 #we read the file and chain the splitlines() method
 lines = path.read_text().splitlines()
@@ -37,27 +38,47 @@ for index, column_header in enumerate(header_row):
 #we now know which column is what
 #we'll read in the high temperature for each day
 
-#extract high temperatures
-highs = []
+
 
 #reader object continues from where it left off in the csv file and automatically
 #retruns each line following its current position. becuase we've already read the
 #header row, the loop will begin at the second line where the actual data begins
 #on each pass through the loop we pull the data from index 4, corresponding to the header
 #TMAX and assign it to the variable high
+
+#extract the dates and high temperatures
+dates, highs = [],[]
+
+#stripping date example
+# first_date= datetime.strptime('2021-07-01','%Y-%m-%d')
+# print(first_date)
+
+# %a- = weekday name, such as monday
+# %Y- = four digit year
+# %y- = 2 digit year
+
+
 for row in reader:
+    #notice we call upon the order of items in the loop based on their index(2 for date, 4 for mxtmp)
+    current_date = datetime.strptime(row[2], '%Y-%m-%d')
     high = int(row[4])
+    dates.append(current_date)
     highs.append(high)
 
-print(highs)
+
 
 plt.style.use('seaborn-v0_8-deep')
 fig, ax = plt.subplots()
-ax.plot(high,color='red')
+ax.plot(dates,highs,color='red')
 
-ax.set_title("daily high temperatures, july 2021")
+ax.set_title("daily high temperatures, 2021")
 ax.set_xlabel('',fontsize=16)
+fig.autofmt_xdate()
 ax.set_ylabel("Temperature (F)",fontsize=16)
 ax.tick_params(labelsize=16)
 
 plt.show()
+
+#plotting a longer timeframe
+
+

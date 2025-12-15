@@ -41,11 +41,11 @@ fig, ax = plt.subplots()
 ax.plot(dates,highs,color='red')
 ax.plot(dates,lows,color='blue')
 ax.fill_between(dates,highs,lows,facecolor='yellow',alpha=0.5)
-
 ax.set_title("daily high and low temperatures, 2021")
 ax.set_xlabel('',fontsize=16)
 fig.autofmt_xdate()
 ax.set_ylabel("Temperature (F)",fontsize=16)
 ax.tick_params(labelsize=16)
 
+plt.ylim(top=120)
 plt.show()

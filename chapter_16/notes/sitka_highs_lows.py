@@ -20,6 +20,7 @@ print(header_row)
 #index the items in that first row, so we can call on the data that row represents
 for index, column_header in enumerate(header_row):
     print(index, column_header)
+    
 
 
 #extract the dates and high temperatures

@@ -6,3 +6,4 @@
     #then make a direct comparison between temp ranges in sitka and death valley
     #done this (see sitka_highs_lows yaxis value being 120 comparative to death valley temp highs)
     
+

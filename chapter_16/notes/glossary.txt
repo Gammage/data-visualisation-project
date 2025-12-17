@@ -21,3 +21,17 @@ sitka_highs_lows.py
 error checking:
 death_valley_highs_lows.py
 
+Mapping global datasets: GeoJSON format
+eq_explore_data.py
+
+examining geoJson data
+eq_explore_data.py
+
+extracting magnitudes
+eq_explore_data.py
+
+extracting location data
+eq_explore_data.py
+
+building a world map
+eq_world_map.py

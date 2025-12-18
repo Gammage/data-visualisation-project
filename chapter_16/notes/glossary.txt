@@ -35,3 +35,9 @@ eq_explore_data.py
 
 building a world map
 eq_world_map.py
+
+customizing marker colours
+eq_world_map.py
+
+adding hover text:
+eq_world_map.py

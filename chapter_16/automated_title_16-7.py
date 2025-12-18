@@ -1,3 +1,8 @@
+##automated title##
+#in this section, we used the generic title global earthquakes
+#instead, you can use the title for the dataset in the metadata part
+#of the geoJSON file. pull this value and assign it to the variable title
+
 from pathlib import Path
 import json
 
@@ -14,24 +19,17 @@ path.write_text(readable_contents)
 all_eq_dicts = all_eq_data['features']
 print(len(all_eq_dicts))
 
-#list of information to store/reference on globe style datamap
-mags, lons, lats, eq_titles = [], [], [],[]
-for eq_dict in all_eq_dicts:
-    #going through json file, appending the info we want to variables
-    mag = eq_dict['properties']['mag']
-    lon = eq_dict['geometry']['coordinates'][0]
-    lat = eq_dict['geometry']['coordinates'][1]
-    eq_title = eq_dict['properties']['title']
-    mags.append(mag)
-    lons.append(lon)
-    lats.append(lat)
-    eq_titles.append(eq_title)
+##refactoring exercise    
+mags = [eq_dict['properties']['mag'] for eq_dict in all_eq_dicts]
+lons = [eq_dict['geometry']['coordinates'][0] for eq_dict in all_eq_dicts]
+lats = [eq_dict['geometry']['coordinates'][1] for eq_dict in all_eq_dicts]
+eq_titles = [eq_dict['properties']['title'] for eq_dict in all_eq_dicts]
     
 print(mags[:10])
 print(lons[:5])
 print(lats[:5])
 
-title = "global earthquakes"
+title = all_eq_data["metadata"]["title"]
 fig = px.scatter_geo(lat=lats, 
                      lon=lons,
                      size=mags, 
@@ -43,7 +41,3 @@ fig = px.scatter_geo(lat=lats,
                      hover_name=eq_titles,
                      )
 fig.show()
-
-
-
-

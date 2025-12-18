@@ -1,3 +1,15 @@
+##refactoring exercise##
+#loop that pulls data from all_eq_dicts uses variables for the magnitude,
+#long, lat and title of each earthquake before appending these values to their
+#appriopiate lists. this approach was chosen for clarity in how to pull up from a
+#geoJSON file. not necessary in your code
+#instead of using these temporarily variables pull each value from eq_dict and
+#append it to the appropiate list in one line. doing so should shorten the 
+#body of this loop to just four lines.
+#
+
+#list of information to store/reference on globe style datamap
+
 from pathlib import Path
 import json
 
@@ -14,18 +26,11 @@ path.write_text(readable_contents)
 all_eq_dicts = all_eq_data['features']
 print(len(all_eq_dicts))
 
-#list of information to store/reference on globe style datamap
-mags, lons, lats, eq_titles = [], [], [],[]
-for eq_dict in all_eq_dicts:
-    #going through json file, appending the info we want to variables
-    mag = eq_dict['properties']['mag']
-    lon = eq_dict['geometry']['coordinates'][0]
-    lat = eq_dict['geometry']['coordinates'][1]
-    eq_title = eq_dict['properties']['title']
-    mags.append(mag)
-    lons.append(lon)
-    lats.append(lat)
-    eq_titles.append(eq_title)
+##refactoring exercise    
+mags = [eq_dict['properties']['mag'] for eq_dict in all_eq_dicts]
+lons = [eq_dict['geometry']['coordinates'][0] for eq_dict in all_eq_dicts]
+lats = [eq_dict['geometry']['coordinates'][1] for eq_dict in all_eq_dicts]
+eq_titles = [eq_dict['properties']['title'] for eq_dict in all_eq_dicts]
     
 print(mags[:10])
 print(lons[:5])
@@ -43,7 +48,3 @@ fig = px.scatter_geo(lat=lats,
                      hover_name=eq_titles,
                      )
 fig.show()
-
-
-
-

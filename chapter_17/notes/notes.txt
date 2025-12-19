@@ -1,0 +1,53 @@
+//using an API
+
+API: is apart of a website designed to interact with programs
+        - these programs use very specific urls to request certian information
+        - this kind of request is called an API call. the requested data will be returned
+        - in an format like Json or CSV. most apps that use external data sources such as apps
+          that integrate with social media sites, rely on api calls
+
+//Git and Github
+
+in this project, we will use githubs api to request information about python projects
+on the site, and then generate an interactive visualisation of the relative
+popularity of these projects using plotly
+
+you can star projects on github to show support and keep track of projects you/they want to use
+
+// requesting data using an api call
+
+githubs api lets you request a wide range of info through api calls
+eg https://api.github.com/search/repositories?q=language:python+sort:stars
+"total_count": 25010465,
+
+https://api.github.com : directs the request to the part of GitHub that responds to api calls
+search/repositories : tells the api to conduct a search through all the repositories on github
+? : signals that we are about to pass an argument
+(q=) : stands for query
+language:python : we indicate that we want information only on repositories that have 
+python as the primary language
++sort:stars, sorts the projects by the number of stars they've been given
+
+snip below shows first few lines of response:
+{
+  "total_count": 25010465,
+  "incomplete_results": false,
+  "items": [
+    {
+      "id": 54346799,
+      "node_id": "MDEwOlJlcG9zaXRvcnk1NDM0Njc5OQ==",
+      "name": "public-apis",
+      "full_name": "public-apis/public-apis",
+
+url is not primarly entered by humans, a format processed by a program
+book says 9 million, book written in 2021. 25 million as of this project
+books value is true, this is false. so its an apparent complete amount 
+    (maybe the books number is not accurate note)
+
+installing requests
+request package allows python program to easily request information from a website
+and examine the response.
+
+-m pip install requests
+
+

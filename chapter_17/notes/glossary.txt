@@ -1,0 +1,24 @@
+using an API
+notes.txt
+
+Git and Github
+notes.txt
+
+requesting data using an api call
+notes.txt
+
+installing requests
+notes.txt
+
+processing an API response
+python_repos.py
+
+working with the response dictionary
+python_repos.py
+
+monitoring api rate limits
+python_repos.py
+
+visualising repos using plotly:
+python_repos_visual.py
+

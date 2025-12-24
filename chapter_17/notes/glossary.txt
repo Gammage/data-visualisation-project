@@ -27,3 +27,12 @@ python_repos_visual
 
 adding custom tooltips:
 python_repos_visual
+
+adding clickable links:
+python_repos_visual
+
+the hacker news api:
+hn_article.py
+
+#articles on home page:
+hn_submissions.py

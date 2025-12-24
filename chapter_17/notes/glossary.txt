@@ -22,3 +22,8 @@ python_repos.py
 visualising repos using plotly:
 python_repos_visual.py
 
+styling the chart:
+python_repos_visual
+
+adding custom tooltips:
+python_repos_visual

@@ -35,3 +35,4 @@ fig = plt.scatter_geo(lat=lats,
                       hover_name=eq_title)
 
 fig.show()
+
